@@ -1,6 +1,6 @@
-// Project Title
-// Your Name
-// Date
+// CS30 Final Project
+// Kalim Pugh
+// 11/17/2025
 //
 // Extra for Experts:
 // - describe what you did to take this project "above and beyond"
