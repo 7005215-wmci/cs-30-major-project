@@ -12,3 +12,4 @@
 - Sprites for each Character. I don't intend making too much
 - Possibly a final ending
 - Music in the background, probably not too hard to code.
+- Possibly 2 characters to pick from to play as, 1 Boy and 1 Girl.
