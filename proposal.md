@@ -8,8 +8,8 @@
 - Basic Quests that can be done
 - At the very least basic markers and symbols to mark the player and NPCs
 - Very basic inventory system.
+- Music in the background
 ## Nice to Have
 - Sprites for each Character. I don't intend making too much
 - Possibly a final ending
-- Music in the background, probably not too hard to code.
 - Possibly 2 characters to pick from to play as, 1 Boy and 1 Girl.
