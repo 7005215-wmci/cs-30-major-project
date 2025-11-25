@@ -7,6 +7,7 @@
 
 let x = 50;
 let y = 50;
+let size = 70;
 let oldX = x;
 let oldY = y;
 let speed = 5;
@@ -51,8 +52,9 @@ function updatePosition(){
 }
 
 function checkOnBarrier(){
-  if (x  > barrier_X_positions[0] && x  < barrier_X_positions[0] + barrier_widths[0] && y > barrier_Y_positions[0] && y < barrier_Y_positions + barrier_heights){
-    
+  if (x  > barrier_X_positions[0] - size && x < barrier_X_positions[0] + barrier_widths[0] && y > barrier_Y_positions[0] - size  && y < barrier_Y_positions[0] + barrier_heights[0]){
+    x = oldX;
+    y = oldY;
   }
 }
 
