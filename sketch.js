@@ -15,8 +15,8 @@ let barrier_X_positions = [200, 400, 200, 300];
 let barrier_Y_positions = [200, 240, 200, 300];
 let barrier_widths = [400, 200, 100, 100];
 let barrier_heights = [80, 120, 100 , 100];
-let mapChangeX = [600];
-let mapChangeY = [600];
+let mapChangeX = [400];
+let mapChangeY = [400];
 let mapChangeWidth = [200];
 let mapChangeHeight = [200];
 let map = 1;
@@ -72,10 +72,11 @@ function updatePosition(){
   square(x, y, 70);
 }
 
-function mapChange(){}
-  if (x > mapChangeX[0] && x < mapChangeX[0] + size && y)
-
-
+function mapChange(){
+  if (x > mapChangeX[0] - size && x < mapChangeX[0] + mapChangeWidth[0] && y > mapChangeY[0] - size && y < mapChangeY[0] + mapChangeHeight[0]){
+    console.log("Works");
+  }
+}
 function checkOnBarrier(){
   if (x > 800 - size|| x < 0 || y > 800 - size|| y < 0){
     x = oldX;
