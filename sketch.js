@@ -15,10 +15,10 @@ let barrier_X_positions = [200, 400, 200, 300];
 let barrier_Y_positions = [200, 240, 200, 300];
 let barrier_widths = [400, 200, 100, 100];
 let barrier_heights = [80, 120, 100 , 100];
-let mapChangeX = [400];
-let mapChangeY = [400];
-let mapChangeWidth = [200];
-let mapChangeHeight = [200];
+let mapChangeX = [400,400 ];
+let mapChangeY = [400,400];
+let mapChangeWidth = [200,50];
+let mapChangeHeight = [200,50];
 let map = 1;
 
 function setup() {
@@ -67,14 +67,23 @@ function updatePosition(){
   if (map === 2){
     rect(barrier_X_positions[2], barrier_Y_positions[2], barrier_widths[2], barrier_heights[2]);
     rect(barrier_X_positions[3], barrier_Y_positions[3], barrier_widths[3], barrier_heights[3]);
+    fill("red");
+    rect(mapChangeX[1], mapChangeY[1], mapChangeWidth[1], mapChangeHeight[1]);
   }
   fill("blue");
   square(x, y, 70);
 }
 
 function mapChange(){
-  if (x > mapChangeX[0] - size && x < mapChangeX[0] + mapChangeWidth[0] && y > mapChangeY[0] - size && y < mapChangeY[0] + mapChangeHeight[0]){
-    console.log("Works");
+  if (x > mapChangeX[0] - size && x < mapChangeX[0] + mapChangeWidth[0] && y > mapChangeY[0] - size && y < mapChangeY[0] + mapChangeHeight[0] && map === 1){
+    map =2;
+    x = 5;
+    y = 5;
+  }
+  if (x > mapChangeX[1] - size && x < mapChangeX[1] + mapChangeWidth[1] && y > mapChangeY[1] - size && y < mapChangeY[1] + mapChangeHeight[1] && map === 2){
+    map = 1;
+    x = 5;
+    y = 5;
   }
 }
 function checkOnBarrier(){
