@@ -15,10 +15,10 @@ let barrier_X_positions = [200, 400, 200, 300];
 let barrier_Y_positions = [200, 240, 200, 300];
 let barrier_widths = [400, 200, 100, 100];
 let barrier_heights = [80, 120, 100 , 100];
-let mapChangeX = [400,400 ];
-let mapChangeY = [400,400];
-let mapChangeWidth = [200,50];
-let mapChangeHeight = [200,50];
+let mapChangeX = [400,400,0,400];
+let mapChangeY = [400,400,700,400];
+let mapChangeWidth = [200,50,100];
+let mapChangeHeight = [200,50,100];
 let map = 1;
 
 function setup() {
@@ -63,12 +63,17 @@ function updatePosition(){
     rect(barrier_X_positions[1], barrier_Y_positions[1], barrier_widths[1], barrier_heights[1]);
     fill('red');
     rect(mapChangeX[0], mapChangeY[0], mapChangeWidth[0], mapChangeHeight[0]);
+    rect(mapChangeX[2], mapChangeY[2], mapChangeWidth[2], mapChangeHeight[2]);
   }
   if (map === 2){
     rect(barrier_X_positions[2], barrier_Y_positions[2], barrier_widths[2], barrier_heights[2]);
     rect(barrier_X_positions[3], barrier_Y_positions[3], barrier_widths[3], barrier_heights[3]);
     fill("red");
     rect(mapChangeX[1], mapChangeY[1], mapChangeWidth[1], mapChangeHeight[1]);
+  }
+  if (map === 3) {
+    fill("red");
+    rect(mapChangeX[3], mapChangeY[3], mapChangeWidth[3], mapChangeHeight[3]);
   }
   fill("blue");
   square(x, y, 70);
@@ -81,6 +86,16 @@ function mapChange(){
     y = 5;
   }
   if (x > mapChangeX[1] - size && x < mapChangeX[1] + mapChangeWidth[1] && y > mapChangeY[1] - size && y < mapChangeY[1] + mapChangeHeight[1] && map === 2){
+    map = 1;
+    x = 5;
+    y = 5;
+  }
+  if (x > mapChangeX[2] - size && x < mapChangeX[2] + mapChangeWidth[2] && y > mapChangeY[2] - size && y < mapChangeY[2] + mapChangeHeight[2] && map === 1){
+    map = 3;
+    x = 5;
+    y = 5;
+  }
+  if (x > mapChangeX[3] - size && x < mapChangeX[3] + mapChangeWidth[3] && y > mapChangeY[3] - size && y < mapChangeY[3] + mapChangeHeight[3] && map === 3){
     map = 1;
     x = 5;
     y = 5;
