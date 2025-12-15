@@ -1,0 +1,15 @@
+    rect(barrier_X_positions[0], barrier_Y_positions[0], barrier_widths[0], barrier_heights[0]);
+
+
+
+
+  if (x > mapChangeX[0] - size && x < mapChangeX[0] + mapChangeWidth[0] && y > mapChangeY[0] - size && y < mapChangeY[0] + mapChangeHeight[0] && map === 0){
+    map =0;
+    x = 0;
+    y = 0;
+  }
+
+      if (x  > barrier_X_positions[0] - size && x < barrier_X_positions[0] + barrier_widths[0] && y > barrier_Y_positions[0] - size  && y < barrier_Y_positions[0] + barrier_heights[0]){
+      x = oldX;
+      y = oldY;
+      }
