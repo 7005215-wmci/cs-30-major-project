@@ -21,7 +21,7 @@ let mapChangeX = [400,400,0,400,500,600,500];
 let mapChangeY = [400,400,700,400,500.600,0];
 let mapChangeWidth = [200,50,100,100,100,50,100];
 let mapChangeHeight = [200,50,100,100, 100, 50,100];
-let map = 4;
+let map = 1;
 
 function setup() {
   createCanvas(800, 800);
@@ -84,7 +84,7 @@ function updatePosition(){
   }
   if (map === 5){
     fill("red");
-    rect(mapChangeX[5], mapChangeY[5], mapChangeWidth[5], mapChangeHeight[5]);
+    rect(mapChangeX[6], mapChangeY[6], mapChangeWidth[6], mapChangeHeight[6]);
   }
   fill("blue");
   square(x, y, 70);
@@ -121,7 +121,7 @@ function mapChange(){
     x = 5;
     y = 5;
   }
-  if (x > mapChangeX[5] - size && x < mapChangeX[5] + mapChangeWidth[5] && y > mapChangeY[5] - size && y < mapChangeY[5] + mapChangeHeight[5] && map === 4){
+  if (x > mapChangeX[6] - size && x < mapChangeX[6] + mapChangeWidth[6] && y > mapChangeY[6] - size && y < mapChangeY[6] + mapChangeHeight[6] && map === 4){
     map = 5;
     x = 5;
     y = 5;
