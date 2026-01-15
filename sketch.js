@@ -17,10 +17,10 @@ let barrier_X_positions = [];
 let barrier_Y_positions = [];
 let barrier_widths = [];
 let barrier_heights = [];
-let mapChangeX = [400,600, 200, 300,300,200,200, 0,700, 100,500,200, 200,700, 400];
-let mapChangeY = [400,600, 200, 300, 600,200,200,600,300, 100,500,300, 700, 700,300];
-let mapChangeWidth = [200,100, 50, 100, 100,100,100,150,80, 100, 50,100, 100, 100,50];
-let mapChangeHeight = [200,100, 50, 100, 100,100,100,150,80, 100, 50,100, 100, 100,50];
+let mapChangeX = [400,600, 200, 300,300,200,200, 0,700, 100,500,200, 200,700, 400, 500, 700];
+let mapChangeY = [400,600, 200, 300, 600,200,200,600,300, 100,500,300, 700, 700,300,300, 700];
+let mapChangeWidth = [200,100, 50, 100, 100,100,100,150,80, 100, 50,100, 100, 100,50,100, 100];
+let mapChangeHeight = [200,100, 50, 100, 100,100,100,150,80, 100, 50,100, 100, 100,50,100, 100];
 let map = 1;
 
 function setup() {
@@ -105,7 +105,11 @@ function updatePosition(){
   }
   if (map === 9){
     fill("red");
-    rect(mapChangeX[15], mapChangeY[15], mapChangeWidth[15], mapChangeHeight[15]);
+    rect(mapChangeX[15],mapChangeY[15],mapChangeWidth[15],mapChangeHeight[15]);
+  }
+  if (map === 10){
+    fill("red");
+    rect(mapChangeX[16],mapChangeY[16],mapChangeWidth[16],mapChangeHeight[16]);
   }
   fill("blue");
   square(x, y, 70);
@@ -194,6 +198,24 @@ function mapChange(){
   }
   if (x > mapChangeX[13] - size && x < mapChangeX[13] + mapChangeWidth[13] && y > mapChangeY[13] - size && y < mapChangeY[13] + mapChangeHeight[13] && map === 8){
     map = 7;
+    console.log(map);
+    x = 5;
+    y = 5;
+  }
+  if (x > mapChangeX[14] - size && x < mapChangeX[14] + mapChangeWidth[14] && y > mapChangeY[14] - size && y < mapChangeY[14] + mapChangeHeight[14] && map === 7){
+    map = 9;
+    console.log(map);
+    x = 5;
+    y = 5;
+  }
+  if (x > mapChangeX[15] - size && x < mapChangeX[15] + mapChangeWidth[15] && y > mapChangeY[15] - size && y < mapChangeY[15] + mapChangeHeight[15] && map === 9){
+    map = 10;
+    console.log(map);
+    x = 5;
+    y = 5;
+  }
+  if (x > mapChangeX[16] - size && x < mapChangeX[16] + mapChangeWidth[16] && y > mapChangeY[16] - size && y < mapChangeY[16] + mapChangeHeight[16] && map === 10){
+    map = 9;
     console.log(map);
     x = 5;
     y = 5;
