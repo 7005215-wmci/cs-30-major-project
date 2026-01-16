@@ -17,10 +17,10 @@ let barrier_X_positions = [];
 let barrier_Y_positions = [];
 let barrier_widths = [];
 let barrier_heights = [];
-let mapChangeX = [400,600, 200, 300,300,200,200, 0,700, 100,500,200, 200,700, 400, 500, 700];
-let mapChangeY = [400,600, 200, 300, 600,200,200,600,300, 100,500,300, 700, 700,300,300, 700];
-let mapChangeWidth = [200,100, 50, 100, 100,100,100,150,80, 100, 50,100, 100, 100,50,100, 100];
-let mapChangeHeight = [200,100, 50, 100, 100,100,100,150,80, 100, 50,100, 100, 100,50,100, 100];
+let mapChangeX = [750,0, 750, 750,300,200,200, 0,700, 100,500,200, 200,700, 400, 500, 700,600];
+let mapChangeY = [300,300, 300, 300, 600,200,200,600,300, 100,500,300, 700, 700,300,300, 700, 400];
+let mapChangeWidth = [50,50, 50, 50, 100,100,100,150,80, 100, 50,100, 100, 100,50,100, 100, 200];
+let mapChangeHeight = [100,100, 100, 100, 100,100,100,150,80, 100, 50,100, 100, 100,50,100, 100, 200];
 let map = 1;
 
 function setup() {
@@ -111,6 +111,7 @@ function updatePosition(){
     fill("red");
     rect(mapChangeX[16],mapChangeY[16],mapChangeWidth[16],mapChangeHeight[16]);
   }
+
   fill("blue");
   square(x, y, 70);
 }
@@ -221,6 +222,7 @@ function mapChange(){
     y = 5;
   }
 }
+ 
 function checkOnBarrier(){
   if (x > 800 - size|| x < 0 || y > 800 - size|| y < 0){
     x = oldX;
